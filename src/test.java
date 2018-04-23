@@ -30,7 +30,7 @@ public class test {
     //builder (move to a method)
 	public static void main(String[] args) throws Exception {
 		String b1 = null, b2 = null, b3 = null;
-	    String jsonInput = OMDB_GET.searchMovieByTitle("batman", "852159f0");
+	    String jsonInput = OMDB_GET.searchMovieByTitle("batman returns", "852159f0"); // this is being uses as testcase
 	
 	    //creating a new json object	
 	    JSONObject jsonout = new JSONObject(jsonInput);
@@ -41,7 +41,7 @@ public class test {
 	    //for the array length, this will print out all the results.
 	    for (int i = 0, size = jsonArray.length(); i < size; i++)
 	    {
-	      JSONObject objectInArray = jsonArray.getJSONObject(i);
+	      JSONObject objectInArray = jsonArray.getJSONObject(i);  // i is the index value **Note for future that this is what we should call to get a specific value**
 
 	      // "...and get thier component and thier value."
 	      String[] elementNames = JSONObject.getNames(objectInArray);
