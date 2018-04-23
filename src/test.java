@@ -1,7 +1,4 @@
-import java.awt.Toolkit;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
-
 //this is a required for the json stuff to work.
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -48,7 +45,8 @@ public class test {
 
 	      // "...and get thier component and thier value."
 	      String[] elementNames = JSONObject.getNames(objectInArray);
-	      System.out.printf("%d Info About Movie:\n", elementNames.length);
+	      
+	      System.out.printf("%d Info About Movie:\n", elementNames.length);//number of results in each query
 	      for (String elementName : elementNames)
 	      {
 	        String value = objectInArray.getString(elementName);
@@ -58,9 +56,7 @@ public class test {
 	        b2 = objectInArray.getString("Type");
 	        b3 = objectInArray.getString("Year");
 	        
-	        Toolkit tk = Toolkit.getDefaultToolkit();
-	        tk.beep();
-	        Thread.sleep(500);
+
 	       
 	        
 	        System.out.printf("name=%s, value=%s\n", elementName, value);
